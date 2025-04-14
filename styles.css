@@ -1190,4 +1190,187 @@ footer {
 
 .event-details i {
     color: var(--primary-color);
+}
+
+/* Tema Stilleri */
+.theme-white {
+    --primary-color: #333333;
+    --primary-light: #666666;
+    --primary-dark: #000000;
+    --secondary-color: #4A90E2;
+    --secondary-light: #5C9CE2;
+    --secondary-dark: #2171CD;
+    --accent-color: #4CAF50;
+    --accent-light: #81C784;
+    --accent-dark: #388E3C;
+    --text-color: #333;
+    --background: #ffffff;
+    --section-bg: #f8f8f8;
+}
+
+.theme-dark {
+    --primary-color: #BB86FC;
+    --primary-light: #D4B3FC;
+    --primary-dark: #9965D4;
+    --secondary-color: #03DAC6;
+    --secondary-light: #66FFF2;
+    --secondary-dark: #018786;
+    --accent-color: #CF6679;
+    --accent-light: #FF8DA1;
+    --accent-dark: #B1384E;
+    --text-color: #E1E1E1;
+    --background: #121212;
+    --section-bg: #1E1E1E;
+}
+
+.theme-space {
+    --primary-color: #7B2FBE;
+    --primary-light: #9B4EDE;
+    --primary-dark: #5B1C9E;
+    --secondary-color: #00D4FF;
+    --secondary-light: #33DFFF;
+    --secondary-dark: #0099CC;
+    --accent-color: #FF61D8;
+    --accent-light: #FF8AE2;
+    --accent-dark: #CC4EAD;
+    --text-color: #FFFFFF;
+    --background: #0A0B1E;
+    --section-bg: #12142A;
+}
+
+/* Uzay Teması Özel Efektleri */
+.theme-space body {
+    background: linear-gradient(45deg, #0A0B1E, #12142A);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.theme-space body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: starTwinkle 8s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes starTwinkle {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.theme-space .shooting-star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: shootingStar 2s linear infinite;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: translateX(100vw) translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100vw) translateY(100vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+.theme-space .hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-blend-mode: overlay;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-space .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(123,47,190,0.3), rgba(0,212,255,0.3));
+    mix-blend-mode: overlay;
+    animation: auroreEffect 15s ease infinite;
+}
+
+@keyframes auroreEffect {
+    0% { transform: translateX(-100%) rotate(-45deg); }
+    50% { transform: translateX(100%) rotate(45deg); }
+    100% { transform: translateX(-100%) rotate(-45deg); }
+}
+
+.theme-space .card,
+.theme-space .event-card,
+.theme-space .pet-card,
+.theme-space .donation-option {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.theme-space .btn,
+.theme-space .btn-details {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-space .btn::before,
+.theme-space .btn-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.theme-space .btn:hover::before,
+.theme-space .btn-details:hover::before {
+    left: 100%;
+}
+
+.theme-space .section-title {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--secondary-light);
+    position: relative;
+}
+
+.theme-space .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
 } 
