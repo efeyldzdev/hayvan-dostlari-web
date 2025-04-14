@@ -5,7 +5,7 @@ Bu proje, sokak hayvanları için farkındalık yaratmak ve destek sağlamak ama
 
 ## 🌟 Özellikler
 
-- Tema değiştirici (Mavi / Pembe)
+- Tema değiştirici (Mavi / Pembe / Beyaz / Siyah / Uzay)
 - Responsive tasarım
 - Sahiplendirme ve bağış bölümleri
 - Etkinlik galerisi
