@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayvan Dostları Derneği</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Tema Değiştirici -->
+    <div class="theme-switcher">
+        <button class="theme-btn theme-blue" onclick="changeTheme('theme-blue')" title="Mavi Tema">🔵</button>
+        <button class="theme-btn theme-pink" onclick="changeTheme('theme-pink')" title="Pembe Tema">🌸</button>
+    </div>
+
+    <!-- Yükleme Ekranı -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <span>Hayvan Dostları</span>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#events">Etkinlikler</a></li>
+                <li><a href="#adoption">Sahiplendirme</a></li>
+                <li><a href="#donate">Bağış</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Hayvanlar İçin El Ele</h1>
+            <p class="fade-in">Onların sesi olmak için bize katılın</p>
+            <div class="hero-buttons">
+                <a href="#donate" class="btn fade-in">Bağış Yap</a>
+                <a href="#volunteer" class="btn btn-outline fade-in">Gönüllü Ol</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Hakkımızda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hayvan Dostları Derneği olarak, sokak hayvanlarının yaşam kalitesini artırmak ve onlara daha iyi bir gelecek sağlamak için çalışıyoruz.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat-item card">
+                        <i class="fas fa-paw cute-icon"></i>
+                        <h3>1000+</h3>
+                        <p>Kurtarılan Hayvan</p>
+                    </div>
+                    <div class="stat-item card">
+                        <i class="fas fa-home cute-icon"></i>
+                        <h3>500+</h3>
+                        <p>Yuva Bulan</p>
+                    </div>
+                    <div class="stat-item card">
+                        <i class="fas fa-heart cute-icon"></i>
+                        <h3>200+</h3>
+                        <p>Gönüllü</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <div class="container">
+            <h2 class="section-title">Yaklaşan Etkinlikler</h2>
+            <div class="events-gallery">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/event1.jpg" alt="Hayvan Barınağı Ziyareti">
+                    </div>
+                    <div class="event-info">
+                        <h3>Hayvan Barınağı Ziyareti</h3>
+                        <p>Barınaktaki dostlarımızla vakit geçirelim</p>
+                        <div class="event-details">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 - 16:00</span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>İstanbul</span>
+                        </div>
+                        <a href="#" class="btn-details">Detaylar</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/event2.jpg" alt="Sokak Hayvanları Besleme">
+                    </div>
+                    <div class="event-info">
+                        <h3>Sokak Hayvanları Besleme</h3>
+                        <p>Sokaktaki dostlarımızı besleyelim</p>
+                        <div class="event-details">
+                            <i class="fas fa-clock"></i>
+                            <span>09:00 - 12:00</span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ankara</span>
+                        </div>
+                        <a href="#" class="btn-details">Detaylar</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/event3.jpg" alt="Veteriner Kontrolü">
+                    </div>
+                    <div class="event-info">
+                        <h3>Veteriner Kontrolü</h3>
+                        <p>Ücretsiz veteriner muayenesi</p>
+                        <div class="event-details">
+                            <i class="fas fa-clock"></i>
+                            <span>14:00 - 18:00</span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>İzmir</span>
+                        </div>
+                        <a href="#" class="btn-details">Detaylar</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/event4.jpeg" alt="Hayvan Hakları Semineri">
+                    </div>
+                    <div class="event-info">
+                        <h3>Hayvan Hakları Semineri</h3>
+                        <p>Haklarını öğrenelim, koruyalım</p>
+                        <div class="event-details">
+                            <i class="fas fa-clock"></i>
+                            <span>13:00 - 15:00</span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bursa</span>
+                        </div>
+                        <a href="#" class="btn-details">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adoption Section -->
+    <section id="adoption">
+        <div class="container">
+            <h2 class="section-title">Sahiplendirme</h2>
+            <div class="adoption-gallery">
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="images/pet1.jpeg" alt="Minik">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Minik</h3>
+                        <p>2 yaşında, erkek</p>
+                        <div class="pet-tags">
+                            <span>Kedi</span>
+                            <span>Kısırlaştırılmış</span>
+                            <span>Aşılı</span>
+                        </div>
+                        <a href="#" class="btn-details">Detaylar</a>
+                    </div>
+                </div>
+
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="images/pet2.webp" alt="Paşa">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Paşa</h3>
+                        <p>3 yaşında, erkek</p>
+                        <div class="pet-tags">
+                            <span>Köpek</span>
+                            <span>Kısırlaştırılmış</span>
+                            <span>Aşılı</span>
+                        </div>
+                        <a href="#" class="btn-details">Detaylar</a>
+                    </div>
+                </div>
+
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="images/pet3.jpeg" alt="Luna">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Luna</h3>
+                        <p>1 yaşında, dişi</p>
+                        <div class="pet-tags">
+                            <span>Kedi</span>
+                            <span>Kısırlaştırılmış</span>
+                            <span>Aşılı</span>
+                        </div>
+                        <a href="#" class="btn-details">Detaylar</a>
+                    </div>
+                </div>
+
+                <div class="pet-card">
+                    <div class="pet-image">
+                        <img src="images/pet4.webp" alt="Max">
+                    </div>
+                    <div class="pet-info">
+                        <h3>Max</h3>
+                        <p>4 yaşında, erkek</p>
+                        <div class="pet-tags">
+                            <span>Köpek</span>
+                            <span>Kısırlaştırılmış</span>
+                            <span>Aşılı</span>
+                        </div>
+                        <a href="#" class="btn-details">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donation">
+        <div class="container">
+            <h2 class="section-title">Bağış Yapın</h2>
+            <div class="donation-options">
+                <div class="donation-option">
+                    <i class="fas fa-bone donation-icon"></i>
+                    <h3>50₺</h3>
+                    <p>1 Haftalık Mama</p>
+                    <p>Bir sokak hayvanının 1 haftalık mama ihtiyacını karşılayın</p>
+                    <a href="#" class="btn">Bağış Yap</a>
+                </div>
+                
+                <div class="donation-option">
+                    <i class="fas fa-medkit donation-icon"></i>
+                    <h3>150₺</h3>
+                    <p>Sağlık Kontrolü</p>
+                    <p>Bir hayvanın temel sağlık kontrolü ve aşılarına destek olun</p>
+                    <a href="#" class="btn">Bağış Yap</a>
+                </div>
+                
+                <div class="donation-option">
+                    <i class="fas fa-home donation-icon"></i>
+                    <h3>300₺</h3>
+                    <p>Barınak Desteği</p>
+                    <p>Barınaktaki hayvanların bakım ve tedavi masraflarına katkıda bulunun</p>
+                    <a href="#" class="btn">Bağış Yap</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>İstanbul, Türkiye</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+90 555 123 4567</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@hayvandostlari.org</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Adınız" required>
+                        <input type="email" placeholder="E-posta" required>
+                        <textarea placeholder="Mesajınız" required></textarea>
+                        <button type="submit" class="btn">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hayvan Dostları</h3>
+                    <p>Hayvanlar için daha iyi bir dünya için çalışıyoruz.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <ul>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#events">Etkinlikler</a></li>
+                        <li><a href="#adoption">Sahiplendirme</a></li>
+                        <li><a href="#donate">Bağış</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hayvan Dostları Derneği. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tema değiştirme fonksiyonu
+        function changeTheme(theme) {
+            document.body.className = theme;
+            localStorage.setItem('theme', theme);
+            
+            // Tüm renk değişkenlerini güncelle
+            const root = document.documentElement;
+            if (theme === 'theme-blue') {
+                root.style.setProperty('--primary-color', '#2196F3');
+                root.style.setProperty('--primary-light', '#64B5F6');
+                root.style.setProperty('--primary-dark', '#1976D2');
+            } else if (theme === 'theme-pink') {
+                root.style.setProperty('--primary-color', '#FF4081');
+                root.style.setProperty('--primary-light', '#FF80AB');
+                root.style.setProperty('--primary-dark', '#F50057');
+            }
+        }
+
+        // Sayfa yüklendiğinde kaydedilmiş temayı uygula
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'theme-blue';
+            changeTheme(savedTheme);
+            
+            // Loading ekranını kaldır
+            document.querySelector('.loading').style.display = 'none';
+        });
+
+        // Scroll olayında header'ı güncelle
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobil menü toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
