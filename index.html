@@ -11,8 +11,11 @@
 <body>
     <!-- Tema Değiştirici -->
     <div class="theme-switcher">
+        <button class="theme-btn theme-white" onclick="changeTheme('theme-white')" title="Beyaz Tema">⚪</button>
+        <button class="theme-btn theme-dark" onclick="changeTheme('theme-dark')" title="Karanlık Tema">⚫</button>
         <button class="theme-btn theme-blue" onclick="changeTheme('theme-blue')" title="Mavi Tema">🔵</button>
         <button class="theme-btn theme-pink" onclick="changeTheme('theme-pink')" title="Pembe Tema">🌸</button>
+        <button class="theme-btn theme-space" onclick="changeTheme('theme-space')" title="Uzay Teması">🌌</button>
     </div>
 
     <!-- Yükleme Ekranı -->
@@ -341,6 +344,42 @@
                 root.style.setProperty('--primary-color', '#FF4081');
                 root.style.setProperty('--primary-light', '#FF80AB');
                 root.style.setProperty('--primary-dark', '#F50057');
+            } else if (theme === 'theme-white') {
+                root.style.setProperty('--primary-color', '#333333');
+                root.style.setProperty('--primary-light', '#666666');
+                root.style.setProperty('--primary-dark', '#000000');
+            } else if (theme === 'theme-dark') {
+                root.style.setProperty('--primary-color', '#BB86FC');
+                root.style.setProperty('--primary-light', '#D4B3FC');
+                root.style.setProperty('--primary-dark', '#9965D4');
+            } else if (theme === 'theme-space') {
+                root.style.setProperty('--primary-color', '#7B2FBE');
+                root.style.setProperty('--primary-light', '#9B4EDE');
+                root.style.setProperty('--primary-dark', '#5B1C9E');
+                
+                // Uzay teması için yıldız kayması efekti
+                if (!document.querySelector('.shooting-stars')) {
+                    const starsContainer = document.createElement('div');
+                    starsContainer.className = 'shooting-stars';
+                    document.body.appendChild(starsContainer);
+                    
+                    // 10 adet kayar yıldız oluştur
+                    for (let i = 0; i < 10; i++) {
+                        const star = document.createElement('div');
+                        star.className = 'shooting-star';
+                        star.style.top = Math.random() * window.innerHeight + 'px';
+                        star.style.animationDelay = Math.random() * 2 + 's';
+                        starsContainer.appendChild(star);
+                    }
+                }
+            }
+            
+            // Diğer temalar için yıldız efektlerini kaldır
+            if (theme !== 'theme-space') {
+                const starsContainer = document.querySelector('.shooting-stars');
+                if (starsContainer) {
+                    starsContainer.remove();
+                }
             }
         }
 
